@@ -66,42 +66,42 @@
         ao_escape {
             bindings = <&kp ESCAPE>;
             key-positions = <12 13>;
-            layers = <0 4>;
+            layers = <0 1>;
             timeout-ms = <30>;
         };
 
         tn_ctrl_x {
             bindings = <&kp LC(X)>;
             key-positions = <16 17>;
-            layers = <0 4>;
+            layers = <0 1>;
             timeout-ms = <30>;
         };
 
         tn_ctrl_c {
             bindings = <&kp LC(C)>;
             key-positions = <16 17>;
-            layers = <1>;
+            layers = <2>;
             timeout-ms = <30>;
         };
 
         ao_eisu_escape_eisu {
             bindings = <&esc_eisu>;
             key-positions = <12 13 39>;
-            layers = <0 4>;
+            layers = <0 1>;
             timeout-ms = <30>;
         };
 
         aotn_escape_eisu {
             bindings = <&esc_eisu>;
             key-positions = <12 13 16 17>;
-            layers = <0 4>;
+            layers = <0 1>;
             timeout-ms = <30>;
         };
 
         bt_clear {
             bindings = <&bt BT_CLR>;
             key-positions = <28 29>;
-            layers = <2>;
+            layers = <3>;
         };
     };
 
@@ -113,12 +113,22 @@
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &kp Q  &kp L  &kp U  &kp COMMA  &kp DOT  &kp F  &kp W  &kp R  &kp Y  &kp P  &trans
                 &trans  &kp E  &kp I  &kp A  &kp O  &kp MINUS  &trans  &trans  &kp K  &kp T  &kp N  &kp S  &kp H  &trans
-                &trans  &ctrl_or_scroll_toggle LCTRL 4  &mo 3  &mkp LCLK  &kp C  &kp V  &kp RET  &kp TAB  &kp G  &kp D  &kp M  &kp J  &kp B  &trans
-                &trans  &mt LG(LALT) LANG1  &trans  &trans  &trans  &mo 1  &lt 2 SPACE  &kp RGUI  &kp RSHIFT  &kp RALT  &kp X  &kp Z  &kp LANG2  &trans
+                &trans  &ctrl_or_scroll_toggle LCTRL 1  &mo 4  &mkp LCLK  &kp C  &kp V  &kp RET  &kp TAB  &kp G  &kp D  &kp M  &kp J  &kp B  &trans
+                &trans  &mt LG(LALT) LANG1  &trans  &trans  &trans  &mo 2  &lt 3 SPACE  &kp RGUI  &kp RSHIFT  &kp RALT  &kp X  &kp Z  &kp LANG2  &trans
             >;
         };
 
         layer_1 {
+            bindings = <
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_2 {
             bindings = <
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
@@ -128,7 +138,7 @@
             >;
         };
 
-        layer_2 {
+        layer_3 {
             bindings = <
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &trans
@@ -138,23 +148,13 @@
             >;
         };
 
-        layer_3 {
+        layer_4 {
             bindings = <
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &kp F15  &kp F16  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &kp K_VOL_UP  &kp K_VOL_DN  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &mkp RCLK  &cmd_w  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &mkp MB4  &mkp MB5  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
