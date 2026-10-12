@@ -66,7 +66,7 @@
         ao_escape {
             bindings = <&kp ESCAPE>;
             key-positions = <12 13>;
-            layers = <0 4>;
+            layers = <0 4 7>;
             timeout-ms = <30>;
         };
 
@@ -80,21 +80,21 @@
         tn_ctrl_c {
             bindings = <&kp LC(C)>;
             key-positions = <16 17>;
-            layers = <1>;
+            layers = <1 7>;
             timeout-ms = <30>;
         };
 
         ao_eisu_escape_eisu {
             bindings = <&esc_eisu>;
             key-positions = <12 13 39>;
-            layers = <0 4>;
+            layers = <0 4 7>;
             timeout-ms = <30>;
         };
 
         aotn_escape_eisu {
             bindings = <&esc_eisu>;
             key-positions = <12 13 16 17>;
-            layers = <0 4>;
+            layers = <0 4 7>;
             timeout-ms = <30>;
         };
 
@@ -102,6 +102,16 @@
             bindings = <&bt BT_CLR>;
             key-positions = <28 29>;
             layers = <2>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        // Layer 1 とスクロール用 Layer 4 が同時に有効なときだけ Layer 7 を有効にする。
+        layer_1_with_scroll {
+            if-layers = <1 4>;
+            then-layer = <7>;
         };
     };
 
@@ -174,6 +184,16 @@
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &grep_recursive_context  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
