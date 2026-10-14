@@ -13,6 +13,7 @@
 &lt {
     flavor = "hold-preferred";
     tapping-term-ms = <200>;
+    quick-tap-ms = <250>;
 };
 
 / {
@@ -66,6 +67,20 @@
         ao_escape {
             bindings = <&kp ESCAPE>;
             key-positions = <12 13>;
+            layers = <0 1>;
+            timeout-ms = <30>;
+        };
+
+        o_minus_enter {
+            bindings = <&kp RET>;
+            key-positions = <28 29>;
+            layers = <0 1>;
+            timeout-ms = <30>;
+        };
+
+        kt_tab {
+            bindings = <&kp TAB>;
+            key-positions = <32 33>;
             layers = <0 1>;
             timeout-ms = <30>;
         };
