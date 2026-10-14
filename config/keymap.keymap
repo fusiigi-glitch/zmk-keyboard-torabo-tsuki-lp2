@@ -73,14 +73,14 @@
 
         o_minus_enter {
             bindings = <&kp RET>;
-            key-positions = <28 29>;
+            key-positions = <13 14>;
             layers = <0 1>;
             timeout-ms = <30>;
         };
 
         kt_tab {
             bindings = <&kp TAB>;
-            key-positions = <32 33>;
+            key-positions = <15 16>;
             layers = <0 1>;
             timeout-ms = <30>;
         };
