@@ -71,20 +71,6 @@
             timeout-ms = <30>;
         };
 
-        o_minus_enter {
-            bindings = <&kp RET>;
-            key-positions = <13 14>;
-            layers = <0 1>;
-            timeout-ms = <30>;
-        };
-
-        kt_tab {
-            bindings = <&kp TAB>;
-            key-positions = <15 16>;
-            layers = <0 1>;
-            timeout-ms = <30>;
-        };
-
         tn_ctrl_x {
             bindings = <&kp LC(X)>;
             key-positions = <16 17>;
