@@ -1,3 +1,4 @@
+# config/torabo_tsuki_lp_left.overlay に貼り付けるコード
 &pinctrl {
     i2c0_default: i2c0_default {
         group1 {
@@ -13,12 +14,12 @@
     compatible = "nordic,nrf-twim";
     pinctrl-0 = <&i2c0_default>;
     pinctrl-names = "default";
-    clock-frequency = <100000>; // 👈 通信速度を100kHz（安定モード）に制限
+    clock-frequency = <100000>;
 
     trackpad: trackpad@2a {
         compatible = "cirque,glidepoint-i2c";
         reg = <0x2a>;
         status = "okay";
-        dr-gpios = <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        dr-gpios = <&gpio0 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 };
