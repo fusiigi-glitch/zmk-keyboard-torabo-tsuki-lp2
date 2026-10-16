@@ -28,15 +28,6 @@
     };
 
     macros {
-        cmd_w: cmd_w {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp W>
-                , <&macro_release &kp LGUI>;
-        };
-
         esc_eisu: esc_eisu {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -154,7 +145,7 @@
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &kp F15  &kp F16  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &kp K_VOL_UP  &kp K_VOL_DN  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &mkp RCLK  &cmd_w  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &kp LA(ESCAPE)  &trans  &mkp RCLK  &kp LG(W)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &mkp MB4  &mkp MB5  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
