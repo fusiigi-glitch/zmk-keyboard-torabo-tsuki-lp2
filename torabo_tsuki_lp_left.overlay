@@ -13,6 +13,7 @@
     compatible = "nordic,nrf-twim";
     pinctrl-0 = <&i2c0_default>;
     pinctrl-names = "default";
+    clock-frequency = <100000>; // 👈 通信速度を100kHz（安定モード）に制限
 
     trackpad: trackpad@2a {
         compatible = "cirque,glidepoint-i2c";
